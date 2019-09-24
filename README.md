@@ -45,3 +45,10 @@ Browser executes plain Javascript, has no idea we wrote Typescript
 - Writing Typescript is the same as writing Javascript with some <b>"extra documentation"</b>
 - Typescript has no effect on how our code gets executed by the browser or Node.
 - It is best to think of Typescript as being like a friend sitting behind you while you are coding.
+
+
+### Environment Setup
+Typescript compiler
+```
+npm install -g typescript ts-node
+```
