@@ -14,13 +14,18 @@ axios.get(url).then(response => {
   // id, title, completed
   const todo = response.data as Todo;
 
-  const ID = todo.ID;
-  const title = todo.Title;
-  const finished = todo.finished;
+  const id = todo.id;
+  const title = todo.title;
+  const completed = todo.completed;
 
-  console.log(`
-    The Todo with ID: ${ID}
-    Has a title of: ${title}
-    Is it finished: ${finished}
-  `);
+  // completed와 title 값이 바뀐채로 출력됨.
+  logTodo(id, completed, title);
 });
+
+const logTodo = (id, title, completed) => {
+  console.log(`
+    The Todo with ID: ${id}
+    Has a title of: ${title}
+    Is it finished: ${completed}
+  `);
+};
