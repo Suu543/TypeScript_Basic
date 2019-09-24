@@ -31,3 +31,7 @@ Take a look at the API we'll use to fetch data
 - Remember we cannot run typescript code directly inside the browser or with nodejs. We have to first compile this file into plain Javascript and then we can execute the resulting Javascript code. We an access the compiler by writing out <b>TSC</b>
 
 #### ts-node index.ts = tsc index.ts + node index.js
+
+#### Invoking and Catching Error using interface and type!
+
+- Check it out on index.ts!
