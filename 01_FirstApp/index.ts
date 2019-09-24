@@ -19,10 +19,11 @@ axios.get(url).then(response => {
   const completed = todo.completed;
 
   // completed와 title 값이 바뀐채로 출력됨.
-  logTodo(id, completed, title);
+  // logTodo(id, completed, title);
+  logTodo(id, title, completed);
 });
 
-const logTodo = (id, title, completed) => {
+const logTodo = (id: number, title: string, completed: boolean) => {
   console.log(`
     The Todo with ID: ${id}
     Has a title of: ${title}
