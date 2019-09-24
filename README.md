@@ -52,3 +52,7 @@ Typescript compiler
 ```
 npm install -g typescript ts-node
 ```
+
+```
+tsc --help
+```
