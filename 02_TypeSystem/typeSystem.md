@@ -34,3 +34,45 @@ ex)
 - Definition: It's a string
 - TypeScript Definition: It is a value that has all properties + methods that we assume that a string has, such as indexOf(), concat(), includes(), etc...
 
+# Types
+
+```
+Type              Values That Have This Type
+------ |---------------------------------------------------
+string           'hi there', "", "Hello World"
+number           .05, -20, 400
+boolean           true false
+Date              new Date()
+Todo              {id: 1, completed: true, title: "world"}
+```
+
+# Two different categories of types in TS
+
+```
+                             --> number, boolean, void, undefined
+            Primitive Types:
+                             --> string, symbol, null
+Types --------------------------------------------------------------
+                             --> functions, arrays
+            Object Types
+                             --> classes, objects
+```
+
+# Why do we care about types?
+
+- Types are used by the Typescript Compiler to analyze our code for errors
+- Types allow other engineers to understand what values are flowing around our codebase
+
+# Where do we use types?
+
+- <b>EveryWhere!</b>
+
+# Quiz
+
+- What is type? An shortcut to refer to the different properties and function that a value has
+
+- In Typescript, what has a type?
+- Any value
+
+- Why do we care about types?
+- They give the Typescript Compiler information to analyze our code for errors
