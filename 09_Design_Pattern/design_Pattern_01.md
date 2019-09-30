@@ -278,3 +278,32 @@ interface Mappable <---------                                  |
         v                                                      v
 addMarker Method                                             Company
 ```
+
+# Wrap Up
+
+- 1. The fist important thing we covered was that we wanted to restrict the amount of API surface area exposed inside of index.ts. In other words, if another engineer opened up our project and only had access to this file right here (index.ts). We wanted to limit the number of things that they could do. They could only do thing that you and I had specifically allowed inside of our application. For example, another engineer could only create an instance of a user and read its name property and its location. Another engineer could only create a companny and then reference its company name catachphrase and location.
+     And with customMap, another engineer could only create an instance of a customMap and then call that addMarker method. In as far as our code is concerned that's the only thing that other engineers can do inside of here.
+
+The most important aspect of this was that we wanted to restrict access to that Google map that we created because remember the Google map had a ton of different properties associated with it. So to make sure that other engineers could not mess with this thing we added on that private modifier. The private modifier means that we can only reference this property from methods inside of the customMap.
+
+For example, back inside of index.ts, if we tried to refer to customMap.googleMap, we got the error message that said this is a private property and you cannot access to it unless you are inside of the class customMap. I know 100 percent what you're thinking but steven other engineers can just open up this file and start calling this or accesing this proeprty directly from inside this class. Yes I agree with you.Another engineer code to open up this file.
+
+But the idea here was simplay that if we viewed custumMap as being like a black box or kind of like a mystery things of sorts we "limited the damage the other engineers can do". We just exposed the bare minimum amount of functionality to allow our application to work and nothing more. So another engineer can open up that file but if you just kind of view this variable right here by itself there's only two things we can do with it to create an instance and addMarker that's it. Nothing Else.
+
+- 2. The next big thing we spoke about was our interface inside of customMap. So we ran into many issues around this addMarker function. We initially saw that we had two different addMarker function one for business or one for companies. And when we had that duplicated definition, we had a lot of duplicated code. So as an initial approach we tried to say that addMarker could take many differnt types (Bad Approach 부분). The bad thing about this approach is that it's set up a dependency between customMap and all the different things that we would want to map inside of our application. So as soon as we started to add in more things that could be represented on the map as a marker, well we had to go back and update customMap which would have been a very easy time for us to accidentally introduces bugs into our application.
+
+To fix this problem, we invented the dependency here. We said instead of customMap trying to accomodate all these differnt classes, we instead say Hey other classes you have to accommodate customMap. So inside of custom map at the very top we put some instructions on how another class or instance of the class could be an argumnet to addMarker. We did that by defining an interface. That was equivalent to customMap kind of standing up for itself.
+
+- Big Killer feature of typescript is the interplay between classes and interfaces and that's exactly what you are seeing right here. This right here is the killer feature of Typescript and this is how we're going to write awesome code.
+
+```
+ Typical Typescript File
+
+Interface Definitions for working with this class (20%)
+Class definition (80%)
+
+```
+
+1. Restrict API Surface Area
+2. Use interfaces to set up a type of dependency between type the differen classes inside of application
+3. Help typescript put errors in the correct location by using this implements clauses on classes.
