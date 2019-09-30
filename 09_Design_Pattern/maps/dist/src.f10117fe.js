@@ -125,13 +125,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // const company = new Company();
 // console.log(company);
 // Global Variable로 google을 이용할 수 있다.
-new google.maps.Map(document.getElementById("map"), {
+var map = new google.maps.Map(document.getElementById("map"), {
   zoom: 1,
   center: {
     lat: 0,
     lng: 0
   }
 });
+map;
 },{}],"../../../../../../../../../home/jos50275266/.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -160,7 +161,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54120" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54238" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
