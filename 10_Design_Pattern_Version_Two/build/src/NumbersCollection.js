@@ -1,8 +1,22 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
-var NumbersCollection = /** @class */ (function () {
+var Sorter_1 = require("./Sorter");
+var NumbersCollection = /** @class */ (function (_super) {
+    __extends(NumbersCollection, _super);
     function NumbersCollection(data) {
-        this.data = data;
+        var _this = _super.call(this) || this;
+        _this.data = data;
+        return _this;
     }
     Object.defineProperty(NumbersCollection.prototype, "length", {
         get: function () {
@@ -11,6 +25,7 @@ var NumbersCollection = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    // compareValues 하면 오류 발생
     NumbersCollection.prototype.compare = function (leftIndex, rightIndex) {
         return this.data[leftIndex] > this.data[rightIndex];
     };
@@ -20,7 +35,7 @@ var NumbersCollection = /** @class */ (function () {
         this.data[rightIndex] = leftHand;
     };
     return NumbersCollection;
-}());
+}(Sorter_1.Sorter));
 exports.NumbersCollection = NumbersCollection;
 // const collection = new NumbersCollection([1, 2, 3]);
 // data.compare

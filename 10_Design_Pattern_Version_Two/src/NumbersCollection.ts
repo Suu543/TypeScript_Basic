@@ -1,10 +1,16 @@
-export class NumbersCollection {
-    constructor(public data: number[]) { }
+import { Sorter } from './Sorter';
+
+export class NumbersCollection extends Sorter {
+    constructor(public data: number[]) {
+        super();
+    }
+
 
     get length(): number {
         return this.data.length;
     }
 
+    // compareValues 하면 오류 발생
     compare(leftIndex: number, rightIndex: number): boolean {
         return this.data[leftIndex] > this.data[rightIndex];
     }

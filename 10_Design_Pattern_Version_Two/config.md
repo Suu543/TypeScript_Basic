@@ -157,3 +157,88 @@ class Sorter{                           --->      class CharactersCollection {
 
 
 ```
+
+## Interfaces
+
+- Interfaces are useful not because we can describe a type, it's because we can set up a contract between one class and another class. If you imagine X Y Z, all the functionality I'm going to give it.
+
+- Interfaces only specifies the property name and respective types of some other class or some other object. The sortable interface doesn't actually make any claims about these methods doing the correct things. In other words we can actually define a class that has a compare function with these arguments and a swap method with these arguments that return value and both those methods could do the totally incorrect thing like maybe compare returns always false or always true and maybe swap doesn't actually swap at all. Nonetheless has the corret argumetns. IF we had incorrect implementation of these methods, typescript is not going to help us out with that at all. The interface does nothing to guarantee that we are doing the correct thing inside these methods. It just makes sure that these methods exist and have the appropriate types.
+
+```
+Inheritance - take all the methods from 'sorter' and add tehm to the target class
+
+Sorter
+---
+collection: Sortable
+sort()
+
+NumbersCollection
+---
+length()
+compare()
+swap()
+sort()
+
+CharactersCollection
+---
+length()
+compare()
+swap()
+sort()
+
+LinkedList
+---
+length()
+compare()
+swap()
+sort()
+
+```
+
+## 문제
+```
+Typescript's Expectation
+
+Sorter
+sort() ------|
+swap() <-----|
+compare() <--|
+length    <--|
+
+// Typescript is currently looking at Sorter. It looks at the sort method and it sees that inside there. They're reference to swap, compare, and length; So Typescript make sure that swap
+compare in length exist on Sorter. But they don't!
+
+Reality
+
+NumbersCollection
+sort() <------|
+swap() <------|
+compare() <---|
+sort()--------|
+
+// The reality that you and I know is that we are never going to create an instance of Sorter directly. We're never going to create an instance of sorter directly. Instead, we're only going to extend or borrow methods from sorter
+```
+
+## Abstract Classes
+- Can't be used to create an object directly
+- Only used as a parent class
+- Can contain real implementation for some methods
+- The implemented methods can refer to other methods that don't actually exist yet(
+    we still have to provide names and types for the un-implemented methods
+)
+- Can make child classes promise to implement some other method
+
+```
+abstract class Sorter ---------------------> CharactersCollection
+   sort() <---------------------------------------- sort()
+          -----------------------------
+                                      |
+                                      |------>   length()
+                                      |
+   comapre()                          |------>   compare()
+   length()                           |
+   swap()                             |------>    swap()
+// Tell typescript that these methods
+// will exist!!
+
+```
