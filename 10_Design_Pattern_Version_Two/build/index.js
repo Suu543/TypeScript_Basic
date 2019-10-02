@@ -27,8 +27,6 @@ var Sorter = /** @class */ (function () {
                 // Add another type-guard
                 // Be aware of typeof vs instanceof
                 if (typeof this.collection === 'string') {
-                    this.collection.
-                    ;
                 }
             }
         }
