@@ -88,3 +88,14 @@ Show we use an enum to represent...
 
 
 ```
+
+### Extracting CSV Reading
+
+```
+CsvFileReader
+
+Fields                         Methods
+filename: string               read(): void
+data: string[][]
+
+```
