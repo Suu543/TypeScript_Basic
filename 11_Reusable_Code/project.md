@@ -61,3 +61,11 @@ Point out some things that aren't so great
                     v
         Refactor with Typescript!
 ```
+
+## Issues
+- Magin String Comparisons
+- Source of data is hardcoded
+- Data array is all strings, even though it might have numbers in it
+- Variable named after a specific team
+- Analysis type is fixed
+- No ability to output the report in different formats
