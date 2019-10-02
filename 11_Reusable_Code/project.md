@@ -69,3 +69,22 @@ Point out some things that aren't so great
 - Variable named after a specific team
 - Analysis type is fixed
 - No ability to output the report in different formats
+
+## Enums - When to use Enums?
+- Follow near-identical syntax rules as normal objects
+- Creates an object with the same keys and values when converted from TS to JS
+- Primary Goal is to signal to other engineers that these are all closely related values
+- Use whenever we have a small fixed set of values that are all closely related and known at compile time.
+
+```
+Show we use an enum to represent...
+
+1. Primary colors on a color picker? YES ---> YELLOW, RED, BLUE
+2. The set of movie categories on Netflix ---> No, it is not fixed
+3. The titles of all blog posts by a particular user? ---> No, it can be updated in the future
+4. Size of a drink on an ordering menu? ---> Yes
+5. All years since the year 1750? It might be possible but it is too big to use enum because we normally use enum for a rather small set of vlaues.
+6. the 'read' status of a text message? Yes
+
+
+```
