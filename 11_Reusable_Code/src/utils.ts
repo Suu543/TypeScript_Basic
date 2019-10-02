@@ -1,3 +1,4 @@
+// Converting Date Strings to Dates
 export const dateStringToDate = (datString: string): Date => {
     // 28/10/2018
     const dateParts = datString.split('/') /* ['28', '10', '2018'] */

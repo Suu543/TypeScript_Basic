@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// Converting Date Strings to Dates
 exports.dateStringToDate = function (datString) {
     // 28/10/2018
     var dateParts = datString.split('/') /* ['28', '10', '2018'] */
