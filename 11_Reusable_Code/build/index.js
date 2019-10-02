@@ -12,6 +12,8 @@ var MatchResult_1 = require("./MatchResult");
 //     .map((row: string) => {
 //         return row.split(',');
 //     });
+// 1. 재사용성을 위해 CsvFileReader 생성
+// 2. outside API 에서 받아와도 이용하기위해 하지만 현재는 football 파일에만 이용할 수 있다.
 var reader = new CsvFileReader_1.CsvFileReader('football.csv');
 reader.read();
 // const dateOfFirstMatch = reader.data[0][0];
