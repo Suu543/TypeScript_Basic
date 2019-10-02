@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// You can pass in any object anything whatsoever that has there three properties.
 var Sorter = /** @class */ (function () {
     function Sorter(collection) {
         this.collection = collection;

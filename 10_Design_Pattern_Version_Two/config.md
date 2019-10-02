@@ -120,5 +120,40 @@ class NumbersCollection {
     compare(i, j)
     length: number
 }
+```
+
+
+## The Big Reveal
+```
+------------------------------------------------
+                                             
+                                                  // NumbersCollection.ts
+                                                  class NumbersCollection {
+                                        --->           sawp(i,j)
+                                                       compare(i, j)        
+                                                       length      
+                                                  }  
+                                         
+
+
+// Instructions on 
+//how to be eligible for sorting                  // CharactersCollection.ts
+class Sorter{                           --->      class CharactersCollection {
+    sort() {                                             swap(i, j)
+                                                         compare(i, j)
+                                                         length
+    }                                             }
+}
+
+
+                                        --->       // LinkedList.ts
+                                                   class LinkedList {
+                                                       swap(i, j);
+                                                       compare(i, j);
+                                                       length
+                                                   }
+
+
+
 
 ```

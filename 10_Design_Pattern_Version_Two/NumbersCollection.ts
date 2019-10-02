@@ -16,7 +16,7 @@ export class NumbersCollection {
     }
 }
 
-const collection = new NumbersCollection([1, 2, 3]);
+// const collection = new NumbersCollection([1, 2, 3]);
 
 // data.compare
 // data.swap
