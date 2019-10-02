@@ -2,9 +2,12 @@ import fs from 'fs'
 import { dateStringToDate } from './utils';
 import { MatchResult } from './MatchResult'
 
+// 각 자리마다 특정 Type이 있으니까 tuple을 이용해서 Type-Guard하기
+type MatchData = [Date, string, string, number, number, MatchResult, string];
 
 export class CsvFileReader {
-    data: string[][] = [];
+    // data: string[][] = [];
+    data: MatchData[] = [];
 
     constructor(public filename: string) { }
 
@@ -17,7 +20,8 @@ export class CsvFileReader {
             .map((row: string): string[] => {
                 return row.split(',');
             })
-            .map((row: string[]): any => {
+            // We need type-guard here instead of (Date | string | number | MatchResult)[]
+            .map((row: string[]): MatchData => {
                 /* single row */
                 return [
                     dateStringToDate(row[0]),

@@ -14,7 +14,8 @@ var MatchResult_1 = require("./MatchResult");
 //     });
 var reader = new CsvFileReader_1.CsvFileReader('football.csv');
 reader.read();
-console.log(reader.data);
+// const dateOfFirstMatch = reader.data[0][0];
+// console.log(dateOfFirstMatch);
 // Draw가 사용되지않았다고 지우면 모든 dataset을 알지못하기 때문에 이 문제를 방지하기위해 ENUM을 사용하자
 // Object는 다양한 용도로 사용되는데 이 경우 정확이 어떤 용례로 사용했는지 명시하기위해 enum keyword 사용하자
 // enum - enumeration

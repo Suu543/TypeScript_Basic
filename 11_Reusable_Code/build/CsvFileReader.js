@@ -8,6 +8,7 @@ var utils_1 = require("./utils");
 var CsvFileReader = /** @class */ (function () {
     function CsvFileReader(filename) {
         this.filename = filename;
+        // data: string[][] = [];
         this.data = [];
     }
     CsvFileReader.prototype.read = function () {

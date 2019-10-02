@@ -109,5 +109,17 @@ parseData
 
    Date        String      String        number    MatchResult       string
 
+```
 
 ```
+Let's Use Tuple
+1) Define The Tuple as a new type
+[date| string | string | number | number | MatchResult | string]
+
+2) Convert the row of strings into the appropriate types
+'10/18/2018' | Man United | Lecister | '2' | '1'     | H          | A Marriner
+      0          1            2      3   4   5                          6
+parseData
+   Date                                  parseInt
+
+   Date        String      String        number    MatchResult       string
