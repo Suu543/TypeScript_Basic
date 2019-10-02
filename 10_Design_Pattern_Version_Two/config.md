@@ -102,4 +102,23 @@ typeof ---> number, string, boolean, symbol
 Narrow down every otehr type of value
 
 instaneof ---> Every other value that is created with a constructor function
+
+# Sorter.ts
+class Sorter {
+    sort() {
+        for() for()
+        if(this.collection.compare()) {
+            this.collection.swap
+        }
+    }
+}
+
+# NumbersCollection.ts
+class NumbersCollection {
+    data: number[];
+    swap(i, j)
+    compare(i, j)
+    length: number
+}
+
 ```
