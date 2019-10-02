@@ -99,3 +99,15 @@ filename: string               read(): void
 data: string[][]
 
 ```
+## Data Types
+
+```
+'10/18/2018' | Man United | Lecister | '2' | '1'     | H          | A Marriner
+      0          1            2      3   4   5                          6
+parseData
+   Date                                  parseInt
+
+   Date        String      String        number    MatchResult       string
+
+
+```
