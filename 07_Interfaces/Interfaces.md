@@ -106,3 +106,112 @@ const washDishes = {
     completed: false
 }
 ```
+
+## Quiz
+1. The goal of an interface is to:
+    - Define a new type
+
+2. Take a look at the following code. What will Typescript do to decide if `coffeeCup` is of type
+
+```typescript
+interface Cup {
+    volume: number;
+    height: number;
+}
+
+const coffeeCup = {
+    volume: 300,
+    height: 20
+}
+
+```
+- Typescript will iterate through all the properties of the interface and make sure `coffeeCup` has the same properties with the same type
+
+3. Does this `pineTree` object successfuly implement the `Tree` interface? Yes
+
+```typescript
+interface Tree {
+    height: number;
+    name: string;
+}
+
+const pineTree = {
+    height: 200,
+    name: 'pine'
+}
+```
+
+4. Does the `washDishes` object implement the `Todo` interface
+
+```typescript
+interface Todo {
+    id: number;
+    name: string;
+    completed: boolean;
+}
+
+const washDishes = {
+    id: 'ABCD-1234-ABCD-1234',
+    name: 'Do the dishes',
+    completed: false
+}
+```
+
+- No because the `Todo` interface expects `id` to be a `number`, but `washDishes` provided a `string`
+
+5. Does `washDishes` implement both the `Todo` and `Model` interfaces
+
+```typescript
+interface Todo {
+    id: number;
+    name: string;
+    completed: boolean;
+}
+
+interface Model {
+    id: number;
+}
+
+const washDishes = {
+    id: 20,
+    name: "Do the dishes",
+    completed: false
+}
+```
+- Yes, because `washDishes` has all the same property names and types of `Todo` and `Model`
+
+6. Actually in TS the implementation of the interface is implicit. Meaning if the properties of a class has those methods which is mentioned in the interface then TS will think that it implements the interface.
+
+Will be easy for you if try out a code and check for yourself. 
+
+```typescript
+  height: number;
+  width: number;
+}
+ 
+class PrintTree {
+  tree: Tree;
+  constructor(tree: Tree) {
+    this.tree = tree;
+  }
+ 
+  print() {
+    console.log(`height: ${this.tree.height}`);
+  }
+}
+ 
+class PineTree {
+  height: number;
+  width: number;
+  constructor(height: number, width: number) {
+    this.height = height;
+    this.width = width;
+  }
+}
+ 
+const printTree = new PrintTree(new PineTree(100, 20));
+printTree.print();
+```
+- As you can see TS doesn't complain because the PineTree has the exact same properties as the interface. Think of it as a shape of how the object should look. As long as it matches the look TS says okay this is a Tree and won't complain.
+
+

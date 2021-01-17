@@ -2,6 +2,8 @@ class Vehicle {
   //   public drive(): void {
   //     console.log("chugaa chugga");
   //   }
+
+  // 오직 이 클래스 내에서만 접근 가능함
   private hi(): void {
       console.log('hi')
   }
@@ -10,7 +12,8 @@ class Vehicle {
     console.log("beep");
   }
 
-  protected hello(): void: {
+  // 이 클래스와 이 클래스를 상속한 클래스는 접근 가능함
+  protected hello(): void {
       console.log("dasdsa")
   }
 }
@@ -36,7 +39,7 @@ car.startDrivingProcess();
 
 // Fields in classes
 class VehicleThing {
-    // color: string;    
+    // color: string = 'red';    
     // constructor(color: string) {
     //     this.color = color;
     // }
@@ -72,3 +75,4 @@ class Juice extends Beverage {
 
 const orange = new Juice('4', 'blue');
 orange.starting();
+

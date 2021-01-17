@@ -5,6 +5,7 @@ const oldCar = {
   broken: true
 };
 
+// Long Type Annotations은 길어 읽기가 힘들다
 const printVehicle = (vehicle: {
   name: string;
   year: number;
@@ -17,6 +18,7 @@ const printVehicle = (vehicle: {
 
 printVehicle(oldCar);
 
+// Interface를 이용해 Long Type Annotations을 고쳐보자
 // Fixing Long Annotations with Interfaces
 // 새로운 type이라 생각해도 무방 한 것 같다
 interface Vehicle {
@@ -79,4 +81,6 @@ const drinkdrink = {
 };
 
 // 위의 newCar 처럼 reusable 가능
+// drinkdrink랑 newCar 둘 다 summary method가 있기 때문에 재사용이가능하다.
 printSummary(drinkdrink);
+
