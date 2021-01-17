@@ -67,6 +67,15 @@ Types --------------------------------------------------------------
 
 - <b>EveryWhere!</b>
 
+# Course Goals
+- Understand basic types in TS
+- Function typing + annotations
+- Type Definition files           -----> Syntax + Features
+- Arrays in TS
+- Modules System
+- Classes + Refresher on OOP
+- Projects - Design Patterns
+
 # Quiz
 
 - What is type? An shortcut to refer to the different properties and function that a value has
