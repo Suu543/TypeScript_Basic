@@ -11,5 +11,7 @@ const profile = {
 };
 
 // we can ignore this error
-const { age, name }: { age: number; name: string } = profile;
-const { coords: { lat, lng } }: { coords: { lat: number, lng: number } } = profile;
+const { name, age }: { name: string; age: number } = profile;
+const { coords: { lat, lng } }: { coords: { lat: number; lng: number } } = profile;
+const { setAge }: { setAge: (age: number) => void } = profile;
+ 

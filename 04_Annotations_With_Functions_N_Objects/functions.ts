@@ -4,13 +4,13 @@ const add = (a: number, b: number): number => {
 };
 
 // Type Inference
-const multiply = (a: number, b: number) => {
+const multiply = (a: number, b: number): number => {
     return a * b
 }
 
 // Common Mistake - should add return type and keyword
-const subtract = (a: number, b: number) => {
-    a - b
+const subtract = (a: number, b: number): number => {
+    return a - b
 }
 
 function divide(a: number, b: number): number {
@@ -18,7 +18,7 @@ function divide(a: number, b: number): number {
 }
 
 // Annotations for Anonymous Function
-const 곱하기 = function (a: number, b: number): number {
+const multiplyAnonymous = function(a: number, b: number): number {
     return a * b
 }
 
